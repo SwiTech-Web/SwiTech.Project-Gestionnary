@@ -320,7 +320,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <? var j = 1; for each(var project1 in getAllProject(false)){ ?>
+                        <? var j = 0; for each(var project1 in getAllProject(false)){ j++; ?>
                             <tr>
                                 <th scope="row"><?= j ?></th>
                                 <td><a href="<?= getScriptUrl(); ?>?projet=<?= project1[8] ?>"><?= project1[0] ?></a></td>
@@ -332,7 +332,7 @@
                                 <td><?= Number(project1[6]).toFixed(2) + " €" ?></td>
                                 <td><?= (Number(project1[6]).toFixed(2) - (Number(project1[6]).toFixed(2) / 100) * 20).toFixed(2) + " €" ?></td>
                                 <td><?= Number(project1[10]).toFixed(2) + " €" ?></td>
-                                <td><?= project[9] ?></td>
+                                <td><?= project3[9] ?></td>
                                 <td><a style="display: block;" href="<?= getScriptUrl() ?>?page=modify&project=<?= project1[8] ?>" class="fas fa-pen"></a></td>
                             </tr>
                             <? i++;} ?>
